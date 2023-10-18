@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="game.js" type="module"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="game">
+
+        <div class="introScreen">
+            <h1>Space Shooter</h1>
+            <button onclick='startGame();'>Start Game</button>
+            <br><br>
+            <h2>How to play: </h2>
+            <div style="display: flex;justify-content:center">
+                <ul class="instructions">
+                    <li>Use W, S keys to move back and forth</li>
+                    <li>Use A, D keys to rotate and move forward or Arrow Left, Arrow Right</li>
+                    <li>Use A, D keys to rotate and move forward or Arrow Left, Arrow Right</li>
+                    <li>Collect Fuels so you don't run our of fuel</li>
+                    <li>Shoot asteroids and spaceship and bullets so you don't loose out fuel rapidly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gameOverOverlay">
+            <h2>Game Over</h2>
+            <input type="text" id="playerNameInput" placeholder="Name">
+            <button disabled id="ContinueButton">Continue</button>
+
+        </div>
+
+
+        <div class="gameScreen">
+            <div class="gameArea">
+                <p id="scoreArea">Score: 0</p>
+                <p id="Timer">Timer: 0</p>
+                <canvas id="mycanvas"></canvas>
+                <div class="fuelArea">
+                    <p>Fuel</p>
+                    <div id="fuelProgress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
